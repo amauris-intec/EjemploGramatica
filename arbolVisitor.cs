@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from c:\Users\ama\source\repos\EjemploGramatica\asignaturas.g4 by ANTLR 4.9.2
+// Generated from c:\Users\ama\source\repos\EjemploGramatica\arbol.g4 by ANTLR 4.9.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -25,52 +25,64 @@ using IToken = Antlr4.Runtime.IToken;
 
 /// <summary>
 /// This interface defines a complete generic visitor for a parse tree produced
-/// by <see cref="asignaturasParser"/>.
+/// by <see cref="arbolParser"/>.
 /// </summary>
 /// <typeparam name="Result">The return type of the visit operation.</typeparam>
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.9.2")]
 [System.CLSCompliant(false)]
-public interface IasignaturasVisitor<Result> : IParseTreeVisitor<Result> {
+public interface IarbolVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.program"/>.
+	/// Visit a parse tree produced by <see cref="arbolParser.arbol"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitProgram([NotNull] asignaturasParser.ProgramContext context);
+	Result VisitArbol([NotNull] arbolParser.ArbolContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.entry"/>.
+	/// Visit a parse tree produced by <see cref="arbolParser.hijos"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitEntry([NotNull] asignaturasParser.EntryContext context);
+	Result VisitHijos([NotNull] arbolParser.HijosContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.asignatura"/>.
+	/// Visit a parse tree produced by the <c>jamon</c>
+	/// labeled alternative in <see cref="arbolParser.familia"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAsignatura([NotNull] asignaturasParser.AsignaturaContext context);
+	Result VisitJamon([NotNull] arbolParser.JamonContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.fecha"/>.
+	/// Visit a parse tree produced by the <c>pareja</c>
+	/// labeled alternative in <see cref="arbolParser.familia"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitFecha([NotNull] asignaturasParser.FechaContext context);
+	Result VisitPareja([NotNull] arbolParser.ParejaContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.hora"/>.
+	/// Visit a parse tree produced by the <c>matrimonioSinHijos</c>
+	/// labeled alternative in <see cref="arbolParser.matrimonio"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitHora([NotNull] asignaturasParser.HoraContext context);
+	Result VisitMatrimonioSinHijos([NotNull] arbolParser.MatrimonioSinHijosContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.duracion"/>.
+	/// Visit a parse tree produced by the <c>matrimonioConHijos</c>
+	/// labeled alternative in <see cref="arbolParser.matrimonio"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitDuracion([NotNull] asignaturasParser.DuracionContext context);
+	Result VisitMatrimonioConHijos([NotNull] arbolParser.MatrimonioConHijosContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.tema"/>.
+	/// Visit a parse tree produced by the <c>vivo</c>
+	/// labeled alternative in <see cref="arbolParser.persona"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitTema([NotNull] asignaturasParser.TemaContext context);
+	Result VisitVivo([NotNull] arbolParser.VivoContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>fallecido</c>
+	/// labeled alternative in <see cref="arbolParser.persona"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFallecido([NotNull] arbolParser.FallecidoContext context);
 }

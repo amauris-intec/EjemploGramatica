@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from c:\Users\ama\source\repos\EjemploGramatica\asignaturas.g4 by ANTLR 4.9.2
+// Generated from c:\Users\ama\source\repos\EjemploGramatica\arbol.g4 by ANTLR 4.9.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -25,7 +25,7 @@ using IToken = Antlr4.Runtime.IToken;
 using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 
 /// <summary>
-/// This class provides an empty implementation of <see cref="IasignaturasVisitor{Result}"/>,
+/// This class provides an empty implementation of <see cref="IarbolVisitor{Result}"/>,
 /// which can be extended to create a visitor which only needs to handle a subset
 /// of the available methods.
 /// </summary>
@@ -33,9 +33,9 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.9.2")]
 [System.Diagnostics.DebuggerNonUserCode]
 [System.CLSCompliant(false)]
-public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IasignaturasVisitor<Result> {
+public partial class arbolBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IarbolVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.program"/>.
+	/// Visit a parse tree produced by <see cref="arbolParser.arbol"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -43,9 +43,9 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitProgram([NotNull] asignaturasParser.ProgramContext context) { return VisitChildren(context); }
+	public virtual Result VisitArbol([NotNull] arbolParser.ArbolContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.entry"/>.
+	/// Visit a parse tree produced by <see cref="arbolParser.hijos"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -53,9 +53,10 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEntry([NotNull] asignaturasParser.EntryContext context) { return VisitChildren(context); }
+	public virtual Result VisitHijos([NotNull] arbolParser.HijosContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.asignatura"/>.
+	/// Visit a parse tree produced by the <c>jamon</c>
+	/// labeled alternative in <see cref="arbolParser.familia"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -63,9 +64,10 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAsignatura([NotNull] asignaturasParser.AsignaturaContext context) { return VisitChildren(context); }
+	public virtual Result VisitJamon([NotNull] arbolParser.JamonContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.fecha"/>.
+	/// Visit a parse tree produced by the <c>pareja</c>
+	/// labeled alternative in <see cref="arbolParser.familia"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -73,9 +75,10 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFecha([NotNull] asignaturasParser.FechaContext context) { return VisitChildren(context); }
+	public virtual Result VisitPareja([NotNull] arbolParser.ParejaContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.hora"/>.
+	/// Visit a parse tree produced by the <c>matrimonioSinHijos</c>
+	/// labeled alternative in <see cref="arbolParser.matrimonio"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -83,9 +86,10 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHora([NotNull] asignaturasParser.HoraContext context) { return VisitChildren(context); }
+	public virtual Result VisitMatrimonioSinHijos([NotNull] arbolParser.MatrimonioSinHijosContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.duracion"/>.
+	/// Visit a parse tree produced by the <c>matrimonioConHijos</c>
+	/// labeled alternative in <see cref="arbolParser.matrimonio"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -93,9 +97,10 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDuracion([NotNull] asignaturasParser.DuracionContext context) { return VisitChildren(context); }
+	public virtual Result VisitMatrimonioConHijos([NotNull] arbolParser.MatrimonioConHijosContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="asignaturasParser.tema"/>.
+	/// Visit a parse tree produced by the <c>vivo</c>
+	/// labeled alternative in <see cref="arbolParser.persona"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -103,5 +108,16 @@ public partial class asignaturasBaseVisitor<Result> : AbstractParseTreeVisitor<R
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTema([NotNull] asignaturasParser.TemaContext context) { return VisitChildren(context); }
+	public virtual Result VisitVivo([NotNull] arbolParser.VivoContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>fallecido</c>
+	/// labeled alternative in <see cref="arbolParser.persona"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFallecido([NotNull] arbolParser.FallecidoContext context) { return VisitChildren(context); }
 }
